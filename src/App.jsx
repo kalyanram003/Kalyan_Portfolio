@@ -36,21 +36,6 @@ function App() {
   <Experience />
   <Contact />
   <Footer />
-
-        <div id="about" className="max-w-6xl mx-auto px-6 py-24">
-          <h2 className="text-2xl font-semibold">About</h2>
-          <p className="mt-4 text-text-secondary">About section placeholder.</p>
-        </div>
-
-        <div id="projects" className="max-w-6xl mx-auto px-6 py-24">
-          <h2 className="text-2xl font-semibold">Projects</h2>
-          <p className="mt-4 text-text-secondary">Projects section placeholder.</p>
-        </div>
-
-        <div id="contact" className="max-w-6xl mx-auto px-6 py-24">
-          <h2 className="text-2xl font-semibold">Contact</h2>
-          <p className="mt-4 text-text-secondary">Contact section placeholder.</p>
-        </div>
       </motion.main>
     </AnimatePresence>
   )

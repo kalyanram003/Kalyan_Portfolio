@@ -16,7 +16,7 @@ export default function Footer() {
           <a aria-label="LinkedIn" href="https://linkedin.com/in/kalyan-ram-nanduri" className="text-text-secondary hover:text-white"><FiLinkedin /></a>
         </div>
 
-        <div className="text-text-secondary">© {new Date().getFullYear()} Kalyan Ram. All rights reserved.</div>
+  <div className="text-text-secondary">© {new Date().getFullYear()} Kalyan Ram.  All rights reserved</div>
 
         <div className="mt-6">
           <motion.button onClick={scrollToTop} variants={scrollTopBtn} initial="initial" whileHover="hover" className="p-3 rounded-full bg-card-bg">
