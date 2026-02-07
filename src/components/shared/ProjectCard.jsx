@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { projectCard, badgesStagger, badge } from '../../animations/variants'
 
-export default function ProjectCard({ title = 'Project', description = '', badges = [], gradient = 'from-accent-cyan to-accent-blue' }) {
+function ProjectCard({ title = 'Project', description = '', badges = [], gradient = 'from-accent-cyan to-accent-blue' }) {
   return (
     <motion.article variants={projectCard} className="bg-card-bg p-0 rounded-lg overflow-hidden">
       <div className={`h-40 bg-gradient-to-br ${gradient} p-4 flex items-end`}>{/* preview area */}</div>
@@ -24,3 +24,5 @@ export default function ProjectCard({ title = 'Project', description = '', badge
     </motion.article>
   )
 }
+
+export default React.memo(ProjectCard)

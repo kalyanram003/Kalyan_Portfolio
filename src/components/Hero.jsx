@@ -15,7 +15,7 @@ function NameReveal({ name }) {
   )
 }
 
-export default function Hero() {
+function Hero() {
   const tagline = 'Full-Stack Developer | Java & Spring Boot Expert | Cloud Enthusiast'
   const typed = useTypewriter(tagline, 28)
   const reduceMotion = useReducedMotionOnMobile()
@@ -53,3 +53,5 @@ export default function Hero() {
     </section>
   )
 }
+
+export default React.memo(Hero)
