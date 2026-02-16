@@ -17,12 +17,23 @@ export default function About() {
   return (
     <section id="about" className="py-24">
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
-        <motion.div initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }} variants={slideInLeft}>
-          <div className="w-full max-w-md mx-auto bg-card-bg p-6 rounded-xl glass">
-            <div className="w-48 h-48 bg-gradient-to-br from-[rgba(0,217,255,0.04)] rounded-full mx-auto flex items-center justify-center">Image</div>
-            <h3 className="mt-6 text-xl font-semibold">Kalyan Ram</h3>
-            <p className="mt-2 text-text-secondary">Full-Stack developer specializing in Java, Spring Boot, and Cloud.</p>
-            <div className="mt-4 flex flex-wrap gap-2">
+        <motion.div initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }} variants={slideInLeft} className="flex justify-center">
+          <div className="w-full max-w-md bg-card-bg p-6 rounded-xl glass flex flex-col items-center">
+            <motion.div 
+              className="relative w-56 h-56 rounded-full overflow-hidden border-2 border-cyan-500/30 hover:border-cyan-500/60 transition-colors shadow-lg flex-shrink-0"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+            >
+              <img 
+                src="/profile.jpg" 
+                alt="Kalyan Ram" 
+                className="w-full h-full object-cover object-top"
+              />
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-transparent opacity-0 hover:opacity-100 transition-opacity" />
+            </motion.div>
+            <h3 className="mt-6 text-xl font-semibold text-center">Kalyan Ram</h3>
+            <p className="mt-2 text-text-secondary text-center">Full-Stack developer specializing in Java, Spring Boot, and Cloud.</p>
+            <div className="mt-4 flex flex-wrap gap-2 justify-center">
               <span className="px-3 py-1 bg-transparent border border-border-color rounded-full text-sm">Java</span>
               <span className="px-3 py-1 bg-transparent border border-border-color rounded-full text-sm">Spring Boot</span>
               <span className="px-3 py-1 bg-transparent border border-border-color rounded-full text-sm">AWS</span>

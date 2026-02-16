@@ -18,7 +18,7 @@ function NameReveal({ name }) {
 
 function Hero() {
   const tagline = 'Full-Stack Developer | Java & Spring Boot Expert | Cloud Enthusiast'
-  const typed = useTypewriter(tagline, 28)
+  const typed = useTypewriter(tagline, 50)
   const reduceMotion = useReducedMotionOnMobile()
 
   return (

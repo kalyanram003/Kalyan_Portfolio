@@ -7,18 +7,34 @@ export function useReveal(options = { threshold: 0.25, triggerOnce: true }) {
 
 import { useEffect, useState } from 'react'
 
-export function useTypewriter(text = '', speed = 60) {
+export function useTypewriter(text = '', speed = 50) {
   const [value, setValue] = useState('')
+  
   useEffect(() => {
-    let i = 0
+    if (!text) {
+      setValue('')
+      return
+    }
+
+    let isMounted = true
+    let currentIndex = 0
     setValue('')
-    const id = setInterval(() => {
-      setValue((v) => v + text[i])
-      i++
-      if (i >= text.length) clearInterval(id)
+
+    const timer = setInterval(() => {
+      if (isMounted && currentIndex < text.length) {
+        setValue(text.substring(0, currentIndex + 1))
+        currentIndex++
+      } else if (currentIndex >= text.length) {
+        clearInterval(timer)
+      }
     }, speed)
-    return () => clearInterval(id)
+
+    return () => {
+      isMounted = false
+      clearInterval(timer)
+    }
   }, [text, speed])
+
   return value
 }
 
