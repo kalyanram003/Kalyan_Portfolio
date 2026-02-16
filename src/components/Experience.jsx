@@ -4,9 +4,7 @@ import TimelineItem from './TimelineItem'
 import { lineGrow, timelineItemLeft, timelineItemRight, pulse } from '../animations/variants'
 
 const experienceItems = [
-  { date: 'Nov 2024', title: 'Fleet Management System', desc: 'Vehicle tracking with Google Maps and Spring Data JPA' },
-  { date: 'Aug 2025', title: 'Track Buddy', desc: 'Task management with PDF generation and Dockerized deployment' },
-  { date: 'Jul 2024', title: 'AWS Training', desc: 'Completed AWS training and certifications' }
+  { date: 'Jul 2024', title: 'AWS Intern', desc: 'Completed AWS training and certifications'}
 ]
 
 const educationItems = [

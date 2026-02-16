@@ -192,3 +192,90 @@ html, body, #root {
   left: -0.9rem;
   top: 0.25rem;
 }
+
+/* Enhanced Project Card Styles */
+article[class*="bg-card-bg"] {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Project card buttons with improved styling */
+.btn-code {
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+}
+
+.btn-code::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(99, 102, 241, 0.1);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.btn-code:hover::before {
+  left: 0;
+}
+
+.btn-live {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-live::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  z-index: 0;
+}
+
+.btn-live:hover::before {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.btn-live > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive button adjustments */
+@media (max-width: 640px) {
+  .btn-code,
+  .btn-live {
+    font-size: 0.75rem;
+    padding: 0.625rem 0.75rem;
+  }
+
+  .btn-code i,
+  .btn-live i {
+    font-size: 0.875rem;
+  }
+}
+
+/* Float animation for project visual elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(10deg);
+  }
+}
+
+/* Project visual icon animations */
+article i[class*="fas fa-"] {
+  transition: transform 0.3s ease;
+}
+
+article:hover i[class*="fas fa-"] {
+  transform: scale(1.1) rotate(5deg);
+}
