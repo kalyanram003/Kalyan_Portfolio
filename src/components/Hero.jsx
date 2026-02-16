@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { heroContainer, heroLetter, floatSlow } from '../animations/variants'
 import { useTypewriter, useReducedMotionOnMobile } from '../animations/hooks'
+import CodeTerminalScene from './advanced/CodeTerminalScene'
 
 function NameReveal({ name }) {
   return (
@@ -44,9 +45,7 @@ function Hero() {
           </div>
 
           <div className="hidden md:block">
-            <div className="w-full h-64 bg-gradient-to-br from-[rgba(0,217,255,0.06)] to-[rgba(255,255,255,0.02)] rounded-xl bg-card-bg glass p-6">
-              <div className="h-full flex items-center justify-center text-text-secondary">Hero visual placeholder</div>
-            </div>
+            <CodeTerminalScene />
           </div>
         </div>
       </div>
