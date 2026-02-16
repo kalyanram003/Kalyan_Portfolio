@@ -1,4 +1,6 @@
-[build]
+git add .
+git commit -m "Configure Netlify Forms email notifications"
+git push origin main[build]
   command = "npm run build"
   functions = "netlify/functions"
   publish = "dist"
@@ -7,6 +9,25 @@
   command = "npm run dev"
   port = 5173
 
+# Form handling configuration
+[build.environment]
+  NODE_VERSION = "18"
+
+# Contact form configuration
+[[forms]]
+  name = "contact"
+  action = "/"
+  method = "POST"
+  
+  # Notification settings - emails will be sent to these addresses
+  [forms.notification]
+    recipients = ["kalyanram2053@gmail.com"]
+    from_address = "noreply@netlify.com"
+  
+  # Success page (optional)
+  success = "/success"
+
+# SPA redirect
 [[redirects]]
   from = "/*"
   to = "/index.html"
