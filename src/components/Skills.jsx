@@ -7,7 +7,7 @@ import { FiCode, FiServer, FiDatabase, FiBox } from 'react-icons/fi'
 const data = {
   Programming: [
     { name: 'Java', icon: FiCode, level: 97 },
-    { name: 'C++', icon: FiCode, level: 70 },
+    { name: 'C++', icon: FiCode, level: 50 },
     { name: 'JavaScript', icon: FiCode, level: 80 }
   ],
   Backend: [
