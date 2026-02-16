@@ -6,7 +6,7 @@ import { FiCode, FiServer, FiDatabase, FiBox } from 'react-icons/fi'
 
 const data = {
   Programming: [
-    { name: 'Java', icon: FiCode, level: 90 },
+    { name: 'Java', icon: FiCode, level: 97 },
     { name: 'C++', icon: FiCode, level: 70 },
     { name: 'JavaScript', icon: FiCode, level: 80 }
   ],
@@ -16,10 +16,10 @@ const data = {
   ],
   'Database & Cloud': [
     { name: 'MySQL', icon: FiDatabase, level: 80 },
-    { name: 'AWS', icon: FiBox, level: 65 }
+    { name: 'AWS', icon: FiBox, level: 75 }
   ],
   DevOps: [
-    { name: 'Docker', icon: FiBox, level: 70 },
+    { name: 'Docker', icon: FiBox, level: 75 },
     { name: 'Maven', icon: FiBox, level: 60 }
   ]
 }

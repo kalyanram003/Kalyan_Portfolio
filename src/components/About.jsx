@@ -47,7 +47,7 @@ export default function About() {
 
           <div className="mt-6 flex gap-4">
             <StatsCard label="Projects" value={8} />
-            <StatsCard label="Years Experience" value={2} />
+            <StatsCard label="Years Experience" value={1} />
             <StatsCard label="Certifications" value={3} />
           </div>
         </motion.div>
