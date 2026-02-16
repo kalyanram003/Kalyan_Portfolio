@@ -26,14 +26,14 @@ const data = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl font-semibold">Skills</h2>
-        <div className="mt-8 grid md:grid-cols-2 gap-8">
+    <section id="skills" className="py-12 sm:py-24">
+      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 className="text-2xl sm:text-3xl font-semibold">Skills</h2>
+        <div className="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {Object.entries(data).map(([cat, items]) => (
             <div key={cat}>
-              <h3 className="text-xl font-medium mb-4">{cat}</h3>
-              <motion.div variants={gridContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="grid grid-cols-2 gap-4">
+              <h3 className="text-lg sm:text-xl font-medium mb-3 sm:mb-4">{cat}</h3>
+              <motion.div variants={gridContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="grid grid-cols-2 gap-3 sm:gap-4">
                 {items.map((s) => (
                   <SkillCard key={s.name} name={s.name} icon={s.icon} level={s.level} />
                 ))}

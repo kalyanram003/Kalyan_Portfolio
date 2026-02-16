@@ -9,17 +9,17 @@ export default function Footer() {
   }
 
   return (
-    <footer className="py-12">
-      <motion.div initial="hidden" whileInView="show" variants={footerReveal} className="max-w-6xl mx-auto px-6 text-center">
-        <div className="flex items-center justify-center space-x-4 mb-6">
-          <a aria-label="GitHub" href="https://github.com/kalyanram003" className="text-text-secondary hover:text-white"><FiGithub /></a>
-          <a aria-label="LinkedIn" href="https://linkedin.com/in/kalyan-ram-nanduri" className="text-text-secondary hover:text-white"><FiLinkedin /></a>
+    <footer className="py-8 sm:py-12">
+      <motion.div initial="hidden" whileInView="show" variants={footerReveal} className="w-full max-w-6xl mx-auto px-4 sm:px-6 text-center">
+        <div className="flex items-center justify-center space-x-4 mb-4 sm:mb-6">
+          <a aria-label="GitHub" href="https://github.com/kalyanram003" className="text-text-secondary hover:text-white text-lg sm:text-xl"><FiGithub /></a>
+          <a aria-label="LinkedIn" href="https://linkedin.com/in/kalyan-ram-nanduri" className="text-text-secondary hover:text-white text-lg sm:text-xl"><FiLinkedin /></a>
         </div>
 
-  <div className="text-text-secondary">© {new Date().getFullYear()} Kalyan Ram.  All rights reserved</div>
+        <div className="text-xs sm:text-sm text-text-secondary">© {new Date().getFullYear()} Kalyan Ram. All rights reserved</div>
 
-        <div className="mt-6">
-          <motion.button onClick={scrollToTop} variants={scrollTopBtn} initial="initial" whileHover="hover" className="p-3 rounded-full bg-card-bg">
+        <div className="mt-4 sm:mt-6">
+          <motion.button onClick={scrollToTop} variants={scrollTopBtn} initial="initial" whileHover="hover" className="p-2 sm:p-3 rounded-full bg-card-bg text-sm sm:text-base">
             <FiArrowUp />
           </motion.button>
         </div>

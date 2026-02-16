@@ -6,9 +6,9 @@ import CodeTerminalScene from './advanced/CodeTerminalScene'
 
 function NameReveal({ name }) {
   return (
-    <motion.h1 className="text-5xl md:text-8xl font-display font-bold leading-tight" variants={heroContainer} initial="hidden" animate="show">
+    <motion.h1 className="text-3xl sm:text-5xl md:text-8xl font-display font-bold leading-tight" variants={heroContainer} initial="hidden" animate="show">
       {name.split(' ').map((part, i) => (
-        <motion.span key={i} className="inline-block mr-3" variants={heroLetter}>
+        <motion.span key={i} className="inline-block mr-2 sm:mr-3" variants={heroLetter}>
           {part}
         </motion.span>
       ))}
@@ -23,24 +23,28 @@ function Hero() {
 
   return (
     <section id="hero" className="min-h-screen flex items-center">
-      <div className="max-w-6xl mx-auto px-6 py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center">
           <div>
             <motion.div {...(reduceMotion ? {} : floatSlow)}>
               <NameReveal name={'Kalyan Ram'} />
             </motion.div>
 
-            <motion.p className="mt-6 text-lg text-text-secondary max-w-xl" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }}>
+            <motion.p className="mt-4 sm:mt-6 text-sm sm:text-lg text-text-secondary max-w-xl" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }}>
               {typed}
             </motion.p>
 
-            <div className="mt-8 flex items-center space-x-4">
-              <motion.a whileHover={{ scale: 1.03 }} transition={{ type: 'spring', stiffness: 300 }} href="#projects" className="px-5 py-3 bg-gradient-to-r from-accent-cyan to-accent-blue text-black rounded-md font-medium">
+            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+              <motion.a whileHover={{ scale: 1.03 }} transition={{ type: 'spring', stiffness: 300 }} href="#projects" className="w-full sm:w-auto px-5 py-3 bg-gradient-to-r from-accent-cyan to-accent-blue text-black rounded-md font-medium text-center">
                 View Projects
               </motion.a>
-              <motion.a whileHover={{ scale: 1.03 }} transition={{ type: 'spring', stiffness: 300 }} href="#contact" className="px-5 py-3 border border-border-color rounded-md text-text-secondary">
+              <motion.a whileHover={{ scale: 1.03 }} transition={{ type: 'spring', stiffness: 300 }} href="#contact" className="w-full sm:w-auto px-5 py-3 border border-border-color rounded-md text-text-secondary text-center">
                 Contact Me
               </motion.a>
+            </div>
+
+            <div className="mt-8 sm:mt-12 md:hidden">
+              <CodeTerminalScene />
             </div>
           </div>
 

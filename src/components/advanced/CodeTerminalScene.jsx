@@ -13,13 +13,13 @@ function FloatingCodeBlock({ code, language, delay = 0, position = { x: 0, y: 0 
         boxShadow: '0 20px 40px rgba(0, 217, 255, 0.15)',
         borderColor: 'rgba(0, 217, 255, 0.5)'
       }}
-      className="absolute w-72 p-4 rounded-lg backdrop-blur-md border border-cyan-500/20 hover:border-cyan-500/50 transition-colors duration-300 bg-gradient-to-br from-black/40 to-black/20"
+      className="absolute w-56 sm:w-72 p-3 sm:p-4 rounded-lg backdrop-blur-md border border-cyan-500/20 hover:border-cyan-500/50 transition-colors duration-300 bg-gradient-to-br from-black/40 to-black/20"
       style={{
         left: `${position.x}%`,
         top: `${position.y}%`,
       }}
     >
-      <div className="flex items-center justify-between mb-3">
+      <div className="flex items-center justify-between mb-2 sm:mb-3">
         <span className="text-xs font-medium text-cyan-400 tracking-widest">{language}</span>
         <div className="flex gap-1">
           <div className="w-2 h-2 rounded-full bg-red-500/60"></div>
@@ -120,10 +120,10 @@ ENTRYPOINT ["java","-jar",
   }, [])
 
   return (
-    <div className="relative w-full h-full rounded-xl overflow-hidden bg-gradient-to-br from-black/60 via-black/40 to-black/60 border border-cyan-500/10 backdrop-blur-sm">
+    <div className="relative w-full h-full rounded-lg sm:rounded-xl overflow-hidden bg-gradient-to-br from-black/60 via-black/40 to-black/60 border border-cyan-500/10 backdrop-blur-sm">
       {/* Animated gradient mesh background */}
       <motion.div
-        className="absolute inset-0 opacity-30"
+        className="absolute inset-0 opacity-20 sm:opacity-30"
         style={{
           background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(0, 217, 255, 0.3) 0%, transparent 50%)`
         }}
@@ -270,7 +270,7 @@ function CodeTerminalScene() {
 
   return (
     <div 
-      className="relative w-full h-96 rounded-xl overflow-hidden"
+      className="relative w-full h-64 sm:h-80 md:h-96 rounded-lg sm:rounded-xl overflow-hidden"
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
@@ -285,13 +285,13 @@ function CodeTerminalScene() {
           <div className={`absolute inset-0 bg-gradient-to-br ${currentLogo.gradient} blur-3xl`}></div>
           
           {/* ASCII Art */}
-          <pre className={`relative font-mono text-sm md:text-base lg:text-lg ${currentLogo.color} whitespace-pre leading-tight`}>
+          <pre className={`relative font-mono text-xs sm:text-sm md:text-base lg:text-lg ${currentLogo.color} whitespace-pre leading-tight px-2`}>
             {currentLogo.art}
           </pre>
           
           {/* Technology name */}
-          <div className="text-center mt-6">
-            <span className="text-gray-400 text-xl md:text-2xl font-light tracking-widest">
+          <div className="text-center mt-3 sm:mt-6">
+            <span className="text-lg sm:text-xl md:text-2xl text-gray-400 font-light tracking-widest">
               {currentLogo.name}
             </span>
           </div>
@@ -308,7 +308,7 @@ function CodeTerminalScene() {
       </div>
 
       {/* Progress indicators */}
-      <div className={`absolute -bottom-16 left-1/2 transform -translate-x-1/2 flex gap-2 transition-opacity duration-300 ${
+      <div className={`absolute -bottom-10 sm:-bottom-12 left-1/2 transform -translate-x-1/2 flex gap-1.5 sm:gap-2 transition-opacity duration-300 ${
         isHovering ? 'opacity-0' : 'opacity-100'
       }`}>
         {ASCII_LOGOS.map((_, index) => (
