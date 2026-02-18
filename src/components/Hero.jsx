@@ -41,6 +41,9 @@ function Hero() {
               <motion.a whileHover={{ scale: 1.03 }} transition={{ type: 'spring', stiffness: 300 }} href="#contact" className="w-full sm:w-auto px-5 py-3 border border-border-color rounded-md text-text-secondary text-center">
                 Contact Me
               </motion.a>
+              <motion.a whileHover={{ scale: 1.03 }} transition={{ type: 'spring', stiffness: 300 }} href="#" onClick={(e) => { e.preventDefault(); window.open('/resume.pdf', '_blank') }} className="w-full sm:w-auto px-5 py-3 border border-accent-cyan text-accent-cyan rounded-md font-medium text-center hover:bg-accent-cyan hover:text-black transition-colors">
+                View Resume
+              </motion.a>
             </div>
 
             <div className="mt-8 sm:mt-12 md:hidden">

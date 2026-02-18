@@ -9,21 +9,21 @@ const projects = [
     title: 'Track Buddy',
     description: 'Task management with PDF generation, JWT auth, email notifications, Dockerized.',
     badges: ['Java', 'Spring Boot', 'Docker', 'JWT'],
-    githubUrl: 'https://github.com/kalyanram003/track-buddy'
+    liveUrl: 'https://track-buddy-cyan.vercel.app/login',
+    githubUrl: 'https://github.com/kalyanram003/TrackBuddy'
   },
   {
     id: 'fleet-management',
     title: 'Fleet Management System',
     description: 'Vehicle tracking with Google Maps, Spring Data JPA, dynamic PDF reports.',
     badges: ['Java', 'Spring Data JPA', 'Google Maps', 'iText'],
-    githubUrl: 'https://github.com/kalyanram003/fleet-management'
+    githubUrl: 'https://github.com/kalyanram003/Fleet-Management-System'
   },
   {
     id: 'ecoally',
     title: 'EcoAlly',
     description: 'Comprehensive eco-literacy platform with gamified learning experiences, interactive quizzes, real-world challenges, and social features for environmental education.',
     badges: ['React', 'Gamification', 'Educational Tech', 'Interactive'],
-    liveUrl: 'https://ecoally.com',
     githubUrl: 'https://github.com/kalyanram003/ecoally'
   },
   {
@@ -31,21 +31,21 @@ const projects = [
     title: 'Meal Suggestion App',
     description: 'Smart meal suggestion application built with Spring Boot backend and interactive frontend with HTML and JavaScript.',
     badges: ['Spring Boot', 'JavaScript', 'HTML', 'REST API'],
-    githubUrl: 'https://github.com/kalyanram003/meal-suggestion-app'
+    githubUrl: 'https://github.com/kalyanram003/MealSuggestion'
   },
   {
     id: 'microcourses-lms',
     title: 'MicroCourses LMS',
     description: 'Modern React-based learning management system with course discovery, progress tracking, certificate generation, and role-based dashboards for learners, creators, and administrators.',
     badges: ['React 18', 'Tailwind CSS', 'Axios', 'React Router'],
-    githubUrl: 'https://github.com/kalyanram003/microcourses-lms-frontend'
+    githubUrl: 'https://github.com/kalyanram003/LMS-Frontend'
   },
   {
     id: 'humanchain-ai-safety',
     title: 'HumanChain AI Safety Incident Log API',
     description: 'Spring Boot REST API for managing AI safety incident logs to support responsible AI development and compliance tracking.',
     badges: ['Spring Boot', 'REST API', 'Java', 'Incident Management'],
-    githubUrl: 'https://github.com/kalyanram003/humanchain-ai-safety-api'
+    githubUrl: 'https://github.com/kalyanram003/HumanChain-Ai-Safety'
   }
 ]
 

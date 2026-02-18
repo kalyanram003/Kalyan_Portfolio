@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { FiMenu, FiX } from 'react-icons/fi'
 
 const links = [
-  { id: 'home', label: 'Home' },
+  { id: 'hero', label: 'Home' },
   { id: 'about', label: 'About' },
   { id: 'projects', label: 'Projects' },
   { id: 'contact', label: 'Contact' }
