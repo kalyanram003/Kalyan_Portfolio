@@ -59,12 +59,6 @@ export default function Contact() {
               <div className="text-xs sm:text-sm text-text-secondary break-all">kalyanram2053@gmail.com</div>
               <button className="ml-0 sm:ml-3 text-xs sm:text-sm text-accent-cyan whitespace-nowrap" onClick={() => copy('kalyanram2053@gmail.com')}>{copied ? 'Copied' : 'Copy'}</button>
             </div>
-
-            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
-              <div className="text-xs sm:text-sm font-medium whitespace-nowrap">Phone:</div>
-              <div className="text-xs sm:text-sm text-text-secondary">+91 9652741773</div>
-              <button className="ml-0 sm:ml-3 text-xs sm:text-sm text-accent-cyan whitespace-nowrap" onClick={() => copy('+91 9652741773')}>{copied ? 'Copied' : 'Copy'}</button>
-            </div>
           </div>
         </div>
 
